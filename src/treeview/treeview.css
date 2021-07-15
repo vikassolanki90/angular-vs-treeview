@@ -1,0 +1,47 @@
+.tree-label
+{
+  cursor: default;
+  padding: 5px;
+}
+.node-icon-exp
+{
+   width: 0px;
+    height: 0px;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid gray;
+}
+
+.node-icon-cal
+{
+   width: 0px;
+    height: 0px;
+    display: inline-block;
+   border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid gray;
+}
+
+span.icon-container {
+    width: 16px;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+    height: 16px;
+}
+
+span.icon-container svg {
+    /* margin-top: 8px; */
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.tree-children {padding-left: 10px;}
+
+.selected
+{
+  background-color: #6200ee;
+  color: #FFFFFF;
+}

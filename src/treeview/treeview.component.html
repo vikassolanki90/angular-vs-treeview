@@ -1,0 +1,7 @@
+<div class="treeview-container">
+  <div *ngFor="let treeNode of treeItems" class="v-tree-view">
+    <treenode [treeNode]="treeNode" [treeNodeCheckChanged]="treeNodeCheckChanged.bind(this)"
+      [showCheckbox]="treeConfig.showCheckbox" (onNodeArrowClicked)="nodeArrowClicked($event)"
+      (onNodeSelected)="nodeSelected($event)"></treenode>
+  </div>
+</div>

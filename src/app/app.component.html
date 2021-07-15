@@ -1,0 +1,8 @@
+<h3>Treeview Component Demo</h3>
+<input type="checkbox" id="isLazyLoaded"  [(ngModel)]="isLazyLoaded" (change)="regenerateTree()" />
+<label for="isLazyLoaded">Items Lazy Loaded</label>
+{{isLazyLoaded}}
+<div style="width: 500px; float: left;">
+  <treeview #treeView1 [treeItems]="treeItems" [treeConfig]="treeConfig" (onNodeSelected)="nodeSelected($event)"
+    (onLazyLoadNodeExpand)="onLazyLoadNodeExpand($event)"></treeview>
+</div>

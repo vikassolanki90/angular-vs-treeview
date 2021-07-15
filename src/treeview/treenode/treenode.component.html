@@ -1,0 +1,18 @@
+<div class="tree-node">
+  <div class="tree-label-node">
+    <span class="icon-container" (click)="nodeArrowClicked(treeNode)">
+    <span *ngIf="treeNode.loadingChildren" icon-loading> </span>
+    <span *ngIf="(!treeNode.loadingChildren && treeNode.isLazyLoaded) || (!treeNode.loadingChildren && treeNode.children && treeNode.children.length>0 && !treeNode.expanded)" icon-arrow-right> </span>
+    <span *ngIf="!treeNode.loadingChildren && treeNode.children && treeNode.children.length>0 && treeNode.expanded" icon-arrow-bottom> </span>
+    </span>
+    <input type="checkbox" *ngIf="showCheckbox" [checked]="treeNode.checked" [indeterminate]="treeNode.indeterminate" (change)="onCheckbocCheckedChange(treeNode)" />
+    <span class="tree-label" [ngClass]="{'selected' : treeNode.selected}"
+     (click)="nodeSelected(treeNode)">{{treeNode.label}}</span>
+  </div>
+  <div *ngIf="treeNode.expanded && treeNode.children && treeNode.children.length>0" class="tree-children">
+    <treenode *ngFor="let treeNode of treeNode.children" [treeNode]="treeNode"
+      [treeNodeCheckChanged]="treeNodeCheckChanged" [showCheckbox]="showCheckbox"
+      (onNodeArrowClicked)="nodeArrowClicked($event)" (onNodeSelected)="nodeSelected($event)">
+    </treenode>
+  </div>
+</div>
