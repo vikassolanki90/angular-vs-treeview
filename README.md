@@ -1,2 +1,5 @@
 # angular-vs-treeview
-Simple Tree view Component for angular
+
+This is simple angular treeview component.
+
+There might be some glitches please forgive me for that. :)
